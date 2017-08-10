@@ -7,3 +7,5 @@ fetch('/data/test1.json', {
 })
 .then(r => console.log(r))
 .catch(e => console.err(e));
+
+console.log('hello');
