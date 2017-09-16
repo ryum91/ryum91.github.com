@@ -1,3 +1,4 @@
+import './main.scss';
 import Common from 'common';
 
 const contents = document.getElementById('contents');
