@@ -1,2 +1,5 @@
+import Common from 'common';
 
-console.log('test');
+const contents = document.getElementById('contents');
+
+Common.requestMarkdown('/data/test.md', contents);

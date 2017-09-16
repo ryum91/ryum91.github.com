@@ -49,20 +49,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'common': path.resolve(__dirname, 'front/common.js'),
-      'two-layout-header': path.resolve(__dirname, 'front/header/two-layout-header.js'),
-      'three-layout-header': path.resolve(__dirname, 'front/header/three-layout-header.js'),
-      'jquery': 'jquery/src/jquery.js',
-      'jquery-ui': path.resolve(__dirname, 'front/lib/jquery/jquery-ui.js'),
-      'datetimepicker': path.resolve(__dirname, 'front/lib/datetimepicker/jquery.datetimepicker.full.js'),
-      'jstree': path.resolve(__dirname, 'front/lib/jstree/jstree.js'),
-      'multi-select': path.resolve(__dirname, 'front/lib/multi-select/multiple-select.js'),
+      'common': path.resolve(__dirname, 'src/common/common.js'),
       'polyfill': 'babel-polyfill/dist/polyfill.js',
-      'pnp-tab': path.resolve(__dirname, 'front/lib/pnp/pnp-tab.js'),
-      'pnp-util': path.resolve(__dirname, 'front/lib/pnp/pnp-util.js'),
-      'pnp-grid': path.resolve(__dirname, 'front/lib/pnp/pnp-grid.js'),
-      'pnp-validate': path.resolve(__dirname, 'front/lib/pnp/pnp-validate.js'),
-      'chartjs-custom-plugin': path.resolve(__dirname, 'front/lib/chartjs/custom-plugin.js')
     }
   },
   // 배포시 필요한 압축 및 난독화
