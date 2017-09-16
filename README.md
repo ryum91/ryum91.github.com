@@ -1,2 +1,3 @@
-# ryum91.github.com
-ryum91 github page
+# GitHub Pages
+
+https://ryum91.github.io/
