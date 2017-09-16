@@ -7,8 +7,10 @@ const index = '/index.html';
 app.get('*', (req, res) => {
   if( '/' === req.path ) {
     res.sendFile(__dirname + index);
-  } else {
+  } else if ( -1 !== req.path.indexOf('dist') || -1 !== req.path.indexOf('data') || -1 !== req.path.indexOf('favicon') ) {
     res.sendFile(__dirname + req.path);
+  } else {
+    res.sendFile(__dirname + req.path + '.html');
   }
 });
 

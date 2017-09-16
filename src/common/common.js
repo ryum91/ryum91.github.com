@@ -12,10 +12,10 @@ export default {
     fetch(path, {
       method: 'GET'
     }).then(res => {
-      if( !res.ok ) {
-        throw Error(res.statusText);
-      } else {
+      if( res.ok ) {
         return res.text();
+      } else {
+        throw Error(res.statusText);
       }
     }).then(res => {
       resultDom.innerHTML = markdown.toHTML(res);
