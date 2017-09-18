@@ -3,9 +3,11 @@ title:            "Ryum"
 description:      "Charyum. Park"
 url:              https://ryum91.github.io # Site url, without a slash at the end.
 signoff:          "ryum" # Your name
+
 facebook_appid:   544362209237824 # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-106652933-1 # Set tracking, remove from /javascripts/basic.js if unwanted.
 share:            true # Turn on twitter and facebook share buttons
+disqus_id:        "ryum91" 
 
 links:
   - name:         Posts
