@@ -41,6 +41,17 @@
   display: inline-block !important;
 }
 
+.list-main {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+#listTitle {
+  color: #717171;
+  font-weight: bold;
+  font-size: 2em;
+}
+
 .text-blue {
   color: #357edd;
 }

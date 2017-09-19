@@ -10,6 +10,9 @@ share:            true # Turn on twitter and facebook share buttons
 disqus_id:        "ryum91"
 
 links:
+  - name:         Home
+    url:          /
+    external:     false
   - name:         Dev
     url:          /dev
     external:     false
