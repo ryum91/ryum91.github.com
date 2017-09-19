@@ -33,6 +33,14 @@
 }
 /* end Markdown styles */
 
+.share-wrap {
+  text-align: right;
+}
+
 .fb-like {
   display: inline-block !important;
+}
+
+.text-blue {
+  color: #357edd;
 }
