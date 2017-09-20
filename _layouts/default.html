@@ -37,11 +37,16 @@
             </h1>
 
             {% if is_post %}
-            <ul class="body-tags">
-              {% for tag in page.tags %}
-              <li class="tag"><a href="/search?tags={{tag}}">{{tag}}</a></li>
-              {% endfor %}
-            </ul>
+            <div class="tag-wrap">
+              <span class="tag-image" title="tag"></span>
+              <ul class="body-tags">
+                {% for tag in page.tags %}
+                <li class="tag">
+                  <a class="link silver hover-blue pv1" href="/search?tags={{tag}}">#{{tag}}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
             {% endif %}
 
           </div>
@@ -86,8 +91,18 @@
 
     </div>
     <footer class="mw7 center tc pt3 pb4 silver">
-      Template inspired by <a href="http://github.com/muan/scribble" class="link silver hover-blue pv1 text-blue">Scribble</a>
-      <img src="{{ site.url }}/images/scribble2.png" alt="scribble" class="mt4 db center" />
+      Copyright (c) 2017 <b>Ryum</b> All rights reserved.
+      <div class="footer-img-wrap">
+        {% if site.github_url %}
+        <span class="footer-img github" title="GitHub" onclick="window.open('about:blank').location.href='{{site.github_url}}'"></span>
+        {% endif %}
+        {% if site.facebook_url %}
+        <span class="footer-img fb" title="Facebook" onclick="window.open('about:blank').location.href='{{site.facebook_url}}'"></span>
+        {% endif %}
+        {% if site.instagram_url %}
+        <span class="footer-img insta" title="Instagram" onclick="window.open('about:blank').location.href='{{site.instagram_url}}'"></span>
+        {% endif %}
+      </div>
     </footer>
   </body>
 </html>

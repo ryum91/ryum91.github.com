@@ -33,12 +33,11 @@
 }
 /* end Markdown styles */
 
-.share-wrap {
-  text-align: right;
-}
-
-.fb-like {
-  display: inline-block !important;
+/* List Start */
+#listTitle {
+  color: #717171;
+  font-weight: bold;
+  font-size: 2em;
 }
 
 .list-main {
@@ -46,12 +45,79 @@
   padding-bottom: 15px;
 }
 
-#listTitle {
-  color: #717171;
-  font-weight: bold;
-  font-size: 2em;
+.list-text-wrap {
+  width: calc(100% - 80px);
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.list-text {
+  white-space: nowrap;
+}
+/* List End */
+
+/* Content Start */
+.body-tags {
+  list-style: none;
+  padding-left: 5px;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.tag {
+  display: inline-block;
+}
+
+.tag-image {
+  background-image: url('/images/tag.png');
+  background-size: 16px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.share-wrap {
+  text-align: right;
+}
+
+.fb-like {
+  display: inline-block !important;
+}
+/* Content End */
+
+/* Footer Start */
+.footer-img-wrap {
+  margin-top: 10px;
+}
+
+.footer-img {
+  background-size: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.footer-img.github {
+  background-image: url('/images/github.png');
+}
+
+.footer-img.fb {
+  background-image: url('/images/fb.png');
+}
+
+.footer-img.insta {
+  background-image: url('/images/insta.png');
+}
+/* Footer End */
+
+/* Start Util */
 .text-blue {
   color: #357edd;
 }
+/* End Util */
