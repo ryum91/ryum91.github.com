@@ -1,8 +1,8 @@
 # ----------- CONFIGURABLE START -----------
-title:            "Ryum"
+title:            "생각하고, 기억하다."
 description:      "Charyum. Park"
 url:              https://ryum91.github.io # Site url, without a slash at the end.
-signoff:          "ryum" # Your name
+signoff:          "Ryum" # Your name
 
 share:            true # Turn on twitter and facebook share buttons
 disqus_id:        "ryum91"

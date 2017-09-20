@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta content='{{ page.title }} - {{ site.title }}' name='title' />
     <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
-    <title>{{ page.title }} - {{ site.title }}</title>
+    {% if page.title %}
+      <title>{{ page.title }} - {{ site.title }}</title>
+    {% else %}
+      <title>{{ site.title }}</title>
+    {% endif %}
     {% include head.html %}
   </head>
   <body class="lh-copy dark-gray pa0 f6 sans-serif bg-super-white">
@@ -13,7 +17,7 @@
       <a href="{{ site.url }}">
         <img src="{{ site.url }}/images/scribble.png" alt="Home" width="53" height="59">
       </a>
-      <p>{{ site.title }}</p>
+      <p><b>{{ site.title }}</b></p>
     </header>
     <div class="mw7 bg-white mt4 mb3 center br2-ns bt bb ba-ns b--light-gray">
       <nav class="bb b--light-gray pv4 tc" aria-label="Main">
@@ -40,11 +44,17 @@
             <div class="tag-wrap">
               <span class="tag-image" title="tag"></span>
               <ul class="body-tags">
-                {% for tag in page.tags %}
-                <li class="tag">
-                  <a class="link silver hover-blue pv1" href="/search?tags={{tag}}">#{{tag}}</a>
-                </li>
-                {% endfor %}
+                {% if 0 == page.tags.size %}
+                  <li class="tag">
+                    <a class="silver pv1">태그가 존재하지 않습니다.</a>
+                  </li>
+                {% else %}
+                  {% for tag in page.tags %}
+                  <li class="tag">
+                    <a class="link silver hover-blue pv1" href="/search?tags={{tag}}">#{{tag}}</a>
+                  </li>
+                  {% endfor %}
+                {% endif %}
               </ul>
             </div>
             {% endif %}
@@ -91,7 +101,7 @@
 
     </div>
     <footer class="mw7 center tc pt3 pb4 silver">
-      Copyright (c) 2017 <b>Ryum</b> All rights reserved.
+      Copyright (c) 2017 <b>RYUM</b> All rights reserved.
       <div class="footer-img-wrap">
         {% if site.github_url %}
         <span class="footer-img github" title="GitHub" onclick="window.open('about:blank').location.href='{{site.github_url}}'"></span>

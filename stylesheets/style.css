@@ -1,4 +1,5 @@
 @import "https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css";
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
 .bg-super-white { background: #f9f9f9; }
 .top-50 { top: 50% }
@@ -63,7 +64,6 @@
   padding-left: 5px;
   display: inline-block;
   margin: 0;
-  vertical-align: middle;
 }
 
 .tag {
@@ -76,7 +76,7 @@
   width: 16px;
   height: 16px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .share-wrap {
@@ -121,3 +121,7 @@
   color: #357edd;
 }
 /* End Util */
+
+body, .code, code {
+  font-family: 'Jeju Gothic' !important;
+}
