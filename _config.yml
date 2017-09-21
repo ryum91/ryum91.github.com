@@ -1,7 +1,7 @@
 # ----------- CONFIGURABLE START -----------
 title:            "오늘의 기억"
 description:      "Charyum. Park"
-url:              https://ryum91.github.io # Site url, without a slash at the end.
+url:              http://memory.today # Site url, without a slash at the end.
 signoff:          "Ryum" # Your name
 
 share:            true # Turn on twitter and facebook share buttons
