@@ -1,8 +1,8 @@
 ---
-title: null
+title: "About"
 ---
 
-## Park Charyum (1991.12)
+### Park Charyum (1991.12)
 
 끊임없이 새로운 것을 도전하기 좋아하는 개발자입니다.
 
