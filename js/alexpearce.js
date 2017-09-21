@@ -92,12 +92,16 @@ var layoutResultsPage = function(property, value, posts) {
     $('#listElement').append(
       '<li class="mv2">'
         // Page anchor
-        + '<a class="db pv1 link blue hover-mid-gray" href="' + post.href + '">'
-        + ' <time class="fr silver ttu">'
-        +    post.date.year + '-' + post.date.month + '-' + post.date.day
-        + ' </time>'
-        +  posts[i].title
-        + '</a>'
+        +  '<a class="db pv1 link blue hover-mid-gray" href="' + post.href + '">'
+        +    '<div class="list-text-wrap">'
+        +      '<span class="list-text">'
+        +        '[' + majusculeFirst(post.category) + '] ' + post.title
+        +      '</span>'
+        +    '</div>'
+        +    '<time class="fr silver ttu">'
+        +      post.date.year + '-' + post.date.month + '-' + post.date.day
+        +    '</time>'
+        +  '</a>'
         // + tagsList
         + '</li>'
     );

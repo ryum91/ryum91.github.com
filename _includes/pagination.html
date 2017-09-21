@@ -1,8 +1,6 @@
 <section class="fixed-l mw7 center w-100 top-50 tc pb4 nt4">
-  {% if page.previous %}
-    <a href="{{ site.url }}{{ page.previous.url }}" class="no-underline f1 light-blue hover-silver nl5 fl-l ph3" title="Prev">‹</a>
-  {% endif %}
-  {% if page.next %}
-    <a href="{{ site.url }}{{page.next.url}}" class="no-underline f1 light-blue hover-silver nr5 fr-l ph3" title="Next">›</a>
-  {% endif %}
+  <a id="paginationPrev" class="no-underline f1 light-blue hover-silver nl5 fl-l ph3 pagination" title="Prev" style="display:none">‹</a>
+  <a id="paginationNext" class="no-underline f1 light-blue hover-silver nr5 fr-l ph3 pagination" title="Next" style="display:none">›</a>
 </section>
+
+<script src="/js/pagination.js"></script>

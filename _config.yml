@@ -19,10 +19,10 @@ links:
     url:          /
     external:     false
   - name:         Dev
-    url:          /dev
+    url:          /dev/list
     external:     false
   - name:         Daily
-    url:          /daily
+    url:          /daily/list
     external:     false
   - name:         About
     url:          /about
@@ -30,7 +30,7 @@ links:
 
 # ------------ CONFIGURABLE END ------------
 
-permalink:        /posts/:title
+permalink:        /:categories/posts/:title
 defaults:
   - values:
       layout: "default"
