@@ -19,7 +19,7 @@ var majusculeFirst = function(str) {
 // Returns:
 //   string or null
 var getParam = function(param) {
-  var queryString = window.location.search.substring(1),
+  var queryString = decodeURIComponent(window.location.search).substring(1),
       queries = queryString.split("&");
   for (var i in queries) {
     var pair = queries[i].split("=");
@@ -60,6 +60,27 @@ var filterPostsByPropertyValue = function(posts, property, value) {
           filteredPosts.push(post);
         }
       }
+    }
+  }
+
+  return filteredPosts;
+};
+
+var filterContainsValue = function(posts, property, value) {
+  var filteredPosts = [];
+  // The last element is a null terminator
+  posts.pop();
+  for (var i in posts) {
+    var post = posts[i];
+    var prop = post[property];
+
+    // Last element of tags is null
+    post.tags.pop();
+
+    // The property could be a string, such as a post's category,
+    // or an array, such as a post's tags
+    if ( -1 !== prop.toLowerCase().indexOf(value.toLowerCase()) ) {
+      filteredPosts.push(post);
     }
   }
 
@@ -140,14 +161,21 @@ $(function() {
   var map = {
     category : getParam('category'),
     tags     : getParam('tags'),
-    search   : getParam('search')
+    title   : getParam('title')
   };
 
   $.each(map, function(type, value) {
     if (value !== null) {
-      $.getJSON('/search.json', function(data) {
-        layoutResultsPage(type, value, filterPostsByPropertyValue(data, type, value));
-      });
+      if( type === 'title' ) {
+        $.getJSON('/search.json', function(data) {
+          layoutResultsPage('Search', value, filterContainsValue(data, type, value));
+        });
+
+      } else {
+        $.getJSON('/search.json', function(data) {
+          layoutResultsPage(type, value, filterPostsByPropertyValue(data, type, value));
+        });
+      }
     }
   });
 

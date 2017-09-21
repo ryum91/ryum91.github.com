@@ -1,5 +1,5 @@
 # ----------- CONFIGURABLE START -----------
-title:            "오늘의 기억."
+title:            "오늘의 기억"
 description:      "Charyum. Park"
 url:              https://ryum91.github.io # Site url, without a slash at the end.
 signoff:          "Ryum" # Your name
@@ -15,9 +15,6 @@ facebook_appid:   544362209237824 # APP ID for like button, remove from /_includ
 google_analytics: UA-106652933-1 # Set tracking, remove from /javascripts/basic.js if unwanted.
 
 links:
-  - name:         Home
-    url:          /
-    external:     false
   - name:         Dev
     url:          /dev/list
     external:     false

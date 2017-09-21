@@ -1,9 +1,11 @@
 ---
-title: About
 ---
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend.
+## Park Charyum (1991.12)
 
-Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi.
+끊임없이 새로운 것을 도전하기 좋아하는 개발자입니다.
 
-Find me on [GitHub](https://github.com/muan) or [Twitter](https://twitter.com/muanchiou).
+현재는 판교 테크노 벨리에 있는 [PNPSECURE](http://www.pnpsecure.com) 에서 웹 플랫폼 개발을 맡고 있으며, (2015.10 ~ 현재)
+주 업무는 Java Web Server (Spring), JavaScript, Html, CSS, SQL 기타 등등... 웹 개발의 모든 부분을 개발하고 있습니다.
+
+스노우 보드, 스케이트 보드, 자전거 같은 Activity 한 취미 활동을 많이 즐기며 여행을 좋아하고, 사진 및 동영상 촬영/편집에도 관심이 많습니다.

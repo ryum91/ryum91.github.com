@@ -36,27 +36,33 @@
               <div class="fw600 light-silver mt1">{{ page.date | date: "%Y-%m-%d %X" }}</div>
             {% endif %}
 
-            <h1 class="ttu f3 mt0 lh-title cb mb2">
+            <h1 class="f3 mt0 lh-title cb mb2">
               {{ page.title }}
             </h1>
 
             {% if is_post %}
-            <div class="tag-wrap">
-              <span class="tag-image" title="tag"></span>
-              <ul class="body-tags">
-                {% if 0 == page.tags.size %}
-                  <li class="tag">
-                    <a class="silver pv1">태그가 존재하지 않습니다.</a>
-                  </li>
-                {% else %}
-                  {% for tag in page.tags %}
-                  <li class="tag">
-                    <a class="link silver hover-blue pv1" href="/search?tags={{tag}}">#{{tag}}</a>
-                  </li>
-                  {% endfor %}
-                {% endif %}
-              </ul>
-            </div>
+            <table>
+              <tr>
+                <td>
+                  <span class="tag-image" title="tag"></span>
+                </td>
+                <td>
+                  <ul class="body-tags">
+                    {% if 0 == page.tags.size %}
+                    <li class="tag">
+                      <a class="silver pv1">태그가 존재하지 않습니다.</a>
+                    </li>
+                    {% else %}
+                    {% for tag in page.tags %}
+                    <li class="tag">
+                      <a class="link silver hover-blue pv1" href="/search?tags={{tag}}">#{{tag}}</a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+                  </ul>
+                </td>
+              </tr>
+            </table>
             {% endif %}
 
           </div>
