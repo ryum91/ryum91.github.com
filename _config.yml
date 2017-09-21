@@ -30,7 +30,7 @@ links:
 
 # ------------ CONFIGURABLE END ------------
 
-permalink:        /:categories/posts/:title
+permalink:        /:categories/post/:title
 defaults:
   - values:
       layout: "default"
