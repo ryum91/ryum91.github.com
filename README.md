@@ -1,7 +1,7 @@
 # github page for ryum91
 
 ## URL
-https://ryum91.github.io/
+http://memory.today
 
 ## Theme
 Fork by [scribble](https://github.com/muan/scribble)
