@@ -12,6 +12,7 @@
 }
 .markdown-body .highlighter-rouge {
   padding: .25rem .5rem;
+  border-radius: 5px;
 }
 .markdown-body pre {
   margin: 0;
@@ -157,5 +158,4 @@ body, .code, code {
   width: 25px;
   height: 15px;
   display: inline-block;
-  vertical-align: sub;
 }
