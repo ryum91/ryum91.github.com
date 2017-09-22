@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://ryum91.github.io/sitemap.xml
+Sitemap: http://memory.today/sitemap.xml
