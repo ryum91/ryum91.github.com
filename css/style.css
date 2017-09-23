@@ -33,6 +33,21 @@
   border-left: .2rem solid #ccc;
   padding-left: 3.8rem;
 }
+
+.markdown-body table {
+  border-collapse: collapse;
+}
+
+.markdown-body th {
+  background-color: #d5d5d5;
+  padding: 5px;
+  border: 1px solid #a9a9a9;
+}
+
+.markdown-body td {
+  border: 1px solid #a9a9a9;
+  padding: 5px;
+}
 /* end Markdown styles */
 
 /* List Start */
