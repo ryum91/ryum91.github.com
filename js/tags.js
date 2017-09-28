@@ -11,7 +11,6 @@ function shuffleArray(array) {
 
 // Json Data Convert
 function convertData(dataArr) {
-  dataArr = shuffleArray(dataArr);
   var result = {};
 
   for( var i in dataArr ) {
