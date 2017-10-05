@@ -4,7 +4,7 @@ permalink: /
 
 <ul class="list pa0">
   {% for post in site.posts %}
-  <li class="mv2">
+  <li class="mv2 postElement" data-index="{{ forloop.index }}" style="display:none">
     <a href="{{ site.url }}{{ post.url }}" class="db pv1 link blue hover-mid-gray">
       <div class="list-text-wrap">
         <span class="list-text">[{{ post.category }}] {{ post.title }}</span>
@@ -13,10 +13,34 @@ permalink: /
     </a>
   </li>
   {% endfor %}
+  <li id="moreBtn" class="moreBtn">
+    <span>더보기</span>
+  </li>
 </ul>
 
 <script>
-  $('.list-text').each(function(i, e) {
+  var showIndex = 1;
+  var maxItem = 0;
+
+  var $moreBtn = $('#moreBtn');
+
+  function showElement(index) {
+    $('.postElement').filter(function(e) {
+      return (e < (index * 10)) && (e > ((index - 1) * 10));
+    }).show();
+
+    // if( (index * 10) > maxItem ) {
+    //   $moreBtn.addClass('disabled');
+    // }
+  };
+
+  showElement(showIndex);
+
+  $moreBtn.click(function() {
+    showElement( ++showIndex );
+  });
+
+  $('.list-text').each(function(index, e) {
     var $e = $(e);
     var text = $e.text();
     var result = '';
@@ -28,5 +52,6 @@ permalink: /
       }
     }
     $e.text(result);
+    maxItem = index;
   });
 </script>

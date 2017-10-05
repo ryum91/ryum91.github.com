@@ -174,3 +174,16 @@ body, .code, code {
   height: 15px;
   display: inline-block;
 }
+
+.moreBtn {
+  text-align: center;
+  background-color: #E8E8E8;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.moreBtn.disabled {
+  cursor: default;
+  color: #aeaeae;
+}
