@@ -6,6 +6,7 @@ signoff:          "Ryum" # Your name
 
 share:            true # Turn on twitter and facebook share buttons
 disqus_id:        "ryum91"
+page_per_count:   10
 
 github_url: 'https://github.com/ryum91'
 

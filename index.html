@@ -19,27 +19,6 @@ permalink: /
 </ul>
 
 <script>
-  var showIndex = 1;
-  var maxItem = 0;
-
-  var $moreBtn = $('#moreBtn');
-
-  function showElement(index) {
-    $('.postElement').filter(function(e) {
-      return (e < (index * 10)) && (e > ((index - 1) * 10));
-    }).show();
-
-    // if( (index * 10) > maxItem ) {
-    //   $moreBtn.addClass('disabled');
-    // }
-  };
-
-  showElement(showIndex);
-
-  $moreBtn.click(function() {
-    showElement( ++showIndex );
-  });
-
   $('.list-text').each(function(index, e) {
     var $e = $(e);
     var text = $e.text();
@@ -52,6 +31,7 @@ permalink: /
       }
     }
     $e.text(result);
-    maxItem = index;
   });
 </script>
+
+{% include listScript.html %}

@@ -2,10 +2,11 @@
 permalink: /dev/list
 ---
 
+{% assign dev_post = site.posts | where:'category', 'dev' %}
+
 <ul class="list pa0">
-  {% for post in site.posts %}
-  {% if post.category == 'dev' %}
-  <li class="mv2">
+  {% for post in dev_post %}
+  <li class="mv2 postElement" data-index="{{ forloop.index }}" style="display:none">
     <a href="{{ site.url }}{{ post.url }}" class="db pv1 link blue hover-mid-gray">
       <div class="list-text-wrap">
         <span class="list-text">{{ post.title }}</span>
@@ -13,6 +14,10 @@ permalink: /dev/list
       <time class="fr silver ttu">{{ post.date | date: "%Y-%m-%d" }} </time>
     </a>
   </li>
-  {% endif %}
   {% endfor %}
+  <li id="moreBtn" class="moreBtn">
+    <span>더보기</span>
+  </li>
 </ul>
+
+{% include listScript.html %}
