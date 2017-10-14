@@ -10,3 +10,5 @@ title: "About"
 주 업무는 Java Web Server (Spring), JavaScript, Html, CSS, SQL 기타 등등... 웹 개발의 모든 부분을 개발하고 있습니다.
 
 취미는 스노우 보드, 스케이트 보드, 자전거 같은 활동적인 것들을 많이 즐기며, 여행을 좋아하고 사진 및 동영상 촬영/편집에도 관심이 많습니다.
+
+[ryum91@gmail.com](mailto:ryum91@gmail.com)
