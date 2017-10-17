@@ -193,4 +193,5 @@ body, .code, code {
   top: 0;
   background-color: white;
   z-index: 55;
+  -webkit-backface-visibility: hidden;
 }
