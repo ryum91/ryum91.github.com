@@ -28,7 +28,15 @@
       <p><b>{{ site.title }}</b></p>
     </header>
     <div class="mw7 bg-white mt4 mb3 center br2-ns bt bb ba-ns b--light-gray">
-      <nav class="bb b--light-gray pv4 tc" aria-label="Main">
+      <nav id="topMenu" class="bb b--light-gray pv4 tc" aria-label="Main">
+        {% for link in site.links %}
+          <a class="link blue hover-mid-gray mh2 pv1"
+             href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">
+             {{ link.name }}
+           </a>
+        {% endfor %}
+      </nav>
+      <nav id="topMenuFix" class="bb b--light-gray pv4 tc" aria-label="Main" style="display:none">
         {% for link in site.links %}
           <a class="link blue hover-mid-gray mh2 pv1"
              href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">
@@ -123,4 +131,5 @@
       </div>
     </footer>
   </body>
+  <script src="/js/common.js"></script>
 </html>
