@@ -145,6 +145,7 @@ body, .code, code {
 
 .pagination {
   font-family: 'helvetica' !important;
+  cursor: pointer;
 }
 
 /* tags */
