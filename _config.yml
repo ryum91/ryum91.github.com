@@ -33,3 +33,6 @@ permalink:        /:categories/post/:title
 defaults:
   - values:
       layout: "default"
+
+# bundle install
+# bundle exec jekyll serve --watch
