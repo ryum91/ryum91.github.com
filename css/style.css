@@ -220,3 +220,6 @@ html {
 ::-webkit-scrollbar-thumb {
   background: RGBA(0,0,0,.1);
 }
+body {
+  overflow-y: scroll;
+}

@@ -96,7 +96,12 @@ var filterContainsValue = function(posts, property, value) {
 var layoutResultsPage = function(property, value, posts) {
   // Make sure we're on the search results page
   // Update the header
-  $('#listTitle').text( majusculeFirst(property) + " ‘" + value + '’' );
+  var subTitle = majusculeFirst(property);
+  if( 'Tags' === subTitle ) {
+    $('#listTitle').text( "#" + value );
+  } else {
+    $('#listTitle').text( majusculeFirst(property) + " '" + value + "'" );
+  }
 
   // Loop through each post to format it
   for (var i in posts) {

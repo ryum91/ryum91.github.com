@@ -11,4 +11,4 @@ title: "About"
 
 취미는 스노우 보드, 스케이트 보드, 자전거 같은 활동적인 것들을 많이 즐기며, 여행을 좋아하고 사진 및 동영상 촬영/편집에도 관심이 많습니다.
 
-[charyum.park@gmail.com](mailto:charyum.park@gmail.com)
+Contact : [charyum.park@gmail.com](mailto:charyum.park@gmail.com)
