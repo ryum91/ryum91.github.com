@@ -20,8 +20,8 @@
 }
 .markdown-body > .highlighter-rouge,
 .markdown-body > blockquote {
-  padding: .5rem 4rem;
-  margin: 2em -4rem;
+  padding: 1rem 1rem;
+  margin: 2em 0rem;
 }
 .markdown-body > hr {
   margin: 2em 0rem;
@@ -31,7 +31,7 @@
 .markdown-body blockquote {
   background: #f9f9f9;
   border-left: .2rem solid #ccc;
-  padding-left: 3.8rem;
+  padding-left: 1.8rem;
 }
 
 .markdown-body table {
@@ -174,6 +174,7 @@ body, .code, code {
   width: 25px;
   height: 15px;
   display: inline-block;
+  vertical-align: sub;
 }
 
 .moreBtn {
@@ -227,4 +228,8 @@ body {
   text-align: right;
   border-top: 1px dashed #C6C6C6;
   padding-top: 20px
+}
+
+ul, ol {
+  margin-left: -7px;
 }
