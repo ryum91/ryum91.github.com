@@ -10,5 +10,3 @@ $(window).scroll(function() {
     $topMenuFix.hide();
   }
 });
-
-$topMenuFix.css('width', $('.list-main').outerWidth());

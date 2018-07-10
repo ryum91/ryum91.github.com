@@ -196,6 +196,8 @@ body, .code, code {
   background-color: white;
   z-index: 55;
   -webkit-backface-visibility: hidden;
+  width: 100%;
+  max-width: 766px;
 }
 
 html {
