@@ -87,15 +87,6 @@
   display: inline-block;
 }
 
-.tag-image {
-  background-image: url('/images/tag.png');
-  background-size: 16px;
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  vertical-align: top;
-}
-
 .share-wrap {
   text-align: right;
 }
@@ -222,16 +213,4 @@ html {
 }
 ::-webkit-scrollbar-thumb {
   background: RGBA(0,0,0,.1);
-}
-body {
-  overflow-y: scroll;
-}
-.signoff {
-  text-align: right;
-  border-top: 1px dashed #C6C6C6;
-  padding-top: 20px
-}
-
-ul, ol {
-  margin-left: -7px;
 }
