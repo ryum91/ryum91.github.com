@@ -1,4 +1,3 @@
-<p class="mt4 signoff">
-  오늘의 기억<br>
-  {{ site.signoff }}
-</p>
+{% if page.date %}
+<div class="fw600 light-silver mt1 page-date">{{ page.date | date: "%Y%m%d" }} Charyum.Park</div>
+{% endif %}

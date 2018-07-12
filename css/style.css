@@ -64,7 +64,7 @@
 }
 
 .list-text-wrap {
-  width: calc(100% - 80px);
+  width: calc(100% - 100px);
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -188,7 +188,7 @@ body, .code, code {
   z-index: 55;
   -webkit-backface-visibility: hidden;
   width: 100%;
-  max-width: 766px;
+  max-width: 958px;
 }
 
 html {
