@@ -31,3 +31,11 @@ ul, ol {
   font-style: italic;
   border-top: 1px dashed #C6C6C6;
 }
+
+.center {
+  text-align: center;
+}
+
+.desc {
+  color: #555;
+}
