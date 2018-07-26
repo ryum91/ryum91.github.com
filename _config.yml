@@ -15,10 +15,10 @@ google_analytics: UA-106652933-2 # Set tracking, remove from /javascripts/basic.
 
 links:
   - name:         Dev
-    url:          /dev/list
+    url:          /dev
     external:     false
   - name:         Daily
-    url:          /daily/list
+    url:          /daily
     external:     false
   - name:         Tags
     url:          /tags
@@ -29,7 +29,7 @@ links:
 
 # ------------ CONFIGURABLE END ------------
 
-permalink:        /:categories/post/:title
+permalink:        /:categories/:title
 defaults:
   - values:
       layout: "default"
