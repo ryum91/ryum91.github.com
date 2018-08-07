@@ -1,18 +1,5 @@
 // from https://github.com/alexpearce/alexpearce.github.com/blob/master/assets/js/alexpearce.js
 
-// Capitalises a string
-// Accepts:
-//   str: string
-// Returns:
-//   string
-var majusculeFirst = function(str) {
-  var temp = str.charAt(0).toUpperCase();
-  for (var i = 1; i < str.length; i++) {
-    temp += str.charAt(i).toLowerCase();
-  }
-  return temp;
-}
-
 // Retrieves the value of a GET parameter with a given key
 // Accepts:
 //   param: string
@@ -95,12 +82,10 @@ var filterContainsValue = function(posts, property, value) {
 // Returns: nothing
 var layoutResultsPage = function(property, value, posts) {
   // Make sure we're on the search results page
-  // Update the header
-  var subTitle = majusculeFirst(property);
-  if( 'Tags' === subTitle ) {
+  if( 'tags' === property ) {
     $('#listTitle').text( "#" + value );
   } else {
-    $('#listTitle').text( majusculeFirst(property) + " '" + value + "'" );
+    $('#listTitle').text( property + " '" + value + "'" );
   }
 
   // Loop through each post to format it
@@ -121,7 +106,7 @@ var layoutResultsPage = function(property, value, posts) {
         +  '<a class="db pv1 link blue hover-mid-gray" href="' + post.href + '">'
         +    '<div class="list-text-wrap">'
         +      '<span class="list-text">'
-        +        '[' + majusculeFirst(post.category) + '] ' + post.title
+        +        post.title
         +      '</span>'
         +    '</div>'
         +    '<time class="fr silver ttu">'

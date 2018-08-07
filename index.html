@@ -7,7 +7,7 @@ permalink: /
   <li class="mv2 postElement" data-index="{{ forloop.index }}" style="display:none">
     <a href="{{ site.url }}{{ post.url }}" class="db pv1 link blue hover-mid-gray">
       <div class="list-text-wrap">
-        <span class="list-text">[{{ post.category }}] {{ post.title }}</span>
+        <span class="list-text">{{ post.title }}</span>
       </div>
       <time class="fr silver ttu">{{ post.date | date: "%Y-%m-%d" }} </time>
     </a>
@@ -17,21 +17,5 @@ permalink: /
     <span>More</span>
   </li>
 </ul>
-
-<script>
-  $('.list-text').each(function(index, e) {
-    var $e = $(e);
-    var text = $e.text();
-    var result = '';
-    for (var i = 0; i < text.length; i++) {
-      if( i === 1 ) {
-        result += text.charAt(i).toUpperCase();
-      } else {
-        result += text.charAt(i);
-      }
-    }
-    $e.text(result);
-  });
-</script>
 
 {% include listScript.html %}
