@@ -222,3 +222,7 @@ html {
 .shadow {
   box-shadow: 5px 5px 5px #CECECE;
 }
+
+.border {
+  border: 1px solid #000;
+}
