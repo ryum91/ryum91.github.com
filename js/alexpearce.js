@@ -27,13 +27,9 @@ var getParam = function(param) {
 var filterPostsByPropertyValue = function(posts, property, value) {
   var filteredPosts = [];
   // The last element is a null terminator
-  posts.pop();
   for (var i in posts) {
     var post = posts[i];
     var prop = post[property];
-
-    // Last element of tags is null
-    post.tags.pop();
 
     // The property could be a string, such as a post's category,
     // or an array, such as a post's tags
