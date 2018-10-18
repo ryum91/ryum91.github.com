@@ -234,3 +234,28 @@ html {
 .italic {
   font-style: italic;
 }
+
+/* category */
+.category-list {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  white-space: nowrap;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.category {
+  width: auto;
+  background-color: #F9F9F9;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: 1px solid #E4E4E4;
+}
+
+.category.current, .category:hover {
+  background-color: #DADADA;
+}

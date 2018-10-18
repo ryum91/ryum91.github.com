@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign dev_post = site.posts | where:'category', 'dev' %}
+{% assign dev_post = site.posts | where:'category', 'dev' | where:'sub', 'etc' %}
 
 {% include devSub.html %}
 
