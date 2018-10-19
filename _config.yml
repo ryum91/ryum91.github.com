@@ -17,15 +17,23 @@ links:
   - name:         Dev
     url:          /dev
     external:     false
+    icon:         fa-desktop
   - name:         Daily
     url:          /daily
     external:     false
+    icon:         fa-book-open
   - name:         Tags
     url:          /tags
     external:     false
+    icon:         fa-tags
+  - name:         Search
+    url:          /search
+    external:     false
+    icon:         fa-search
   - name:         About
     url:          /about
     external:     false
+    icon:         fa-user
 
 # ------------ CONFIGURABLE END ------------
 

@@ -1,9 +1,21 @@
 ---
 layout: default
 ---
-<script src="/js/alexpearce.js"></script>
-<div id="listTitle"><!-- `key` listing for `value` --></div>
+<div class="search-wrap">
+  <div>
+    <select id="searchType">
+      <option value="title">제목</option>
+      <option value="content">내용</option>
+      <option value="titlecontent">제목 + 내용</option>
+      <option value="tags">태그</option>
+    </select>
+    <input id="searchInput" type="text" placeholder="검색어를 입력하세요." />
+    <button id="searchButton"><i class="fas fa-search"></i></button>
+  </div>
+</div>
 
 <ul id="listElement" class="list pa0 results">
   <!-- results lists -->
 </ul>
+
+<script src="/js/alexpearce.js"></script>

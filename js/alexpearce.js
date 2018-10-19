@@ -1,5 +1,8 @@
 // from https://github.com/alexpearce/alexpearce.github.com/blob/master/assets/js/alexpearce.js
 
+var $searchType = $('#searchType');
+var $searchInput = $('#searchInput');
+
 // Retrieves the value of a GET parameter with a given key
 // Accepts:
 //   param: string
@@ -51,22 +54,24 @@ var filterPostsByPropertyValue = function(posts, property, value) {
 
 var filterContainsValue = function(posts, property, value) {
   var filteredPosts = [];
-  // The last element is a null terminator
-  posts.pop();
+  var isPropertyArray = ( property instanceof Array );
   for (var i in posts) {
     var post = posts[i];
-    var prop = post[property];
-
-    // Last element of tags is null
-    post.tags.pop();
-
-    // The property could be a string, such as a post's category,
-    // or an array, such as a post's tags
-    if ( -1 !== prop.toLowerCase().indexOf(value.toLowerCase()) ) {
-      filteredPosts.push(post);
+    if( isPropertyArray ) {
+      for( var j in property ) {
+        var currentProp = property[j];
+        var prop = post[currentProp];
+        if ( -1 !== prop.toLowerCase().indexOf(value.toLowerCase()) ) {
+          filteredPosts.push(post);
+        }
+      }
+    } else {
+      var prop = post[property];
+      if ( -1 !== prop.toLowerCase().indexOf(value.toLowerCase()) ) {
+        filteredPosts.push(post);
+      }
     }
   }
-
   return filteredPosts;
 };
 
@@ -78,24 +83,12 @@ var filterContainsValue = function(posts, property, value) {
 // Returns: nothing
 var layoutResultsPage = function(property, value, posts) {
   // Make sure we're on the search results page
-  if( 'tags' === property ) {
-    $('#listTitle').text( "#" + value );
-  } else {
-    $('#listTitle').text( property + " '" + value + "'" );
-  }
+  $searchType.val(property);
+  $searchInput.val(value);
 
   // Loop through each post to format it
   for (var i in posts) {
-    // Create an unordered list of the post's tags
-    var tagsList = '<ul class="list-tags">',
-        post     = posts[i],
-        tags     = post.tags;
-
-    for (var j in tags) {
-      tagsList += '<li><a href="/search?tags=' + tags[j] + '">' + tags[j].toLowerCase() + '</a></li>';
-    }
-    tagsList += '</ul>';
-
+    var post = posts[i];
     $('#listElement').append(
       '<li class="mv2">'
         // Page anchor
@@ -109,7 +102,6 @@ var layoutResultsPage = function(property, value, posts) {
         +      post.date.year + '-' + post.date.month + '-' + post.date.day
         +    '</time>'
         +  '</a>'
-        // + tagsList
         + '</li>'
     );
   }
@@ -147,19 +139,26 @@ $(function() {
   var map = {
     category : getParam('category'),
     tags     : getParam('tags'),
-    title   : getParam('title')
+    title   : getParam('title'),
+    content   : getParam('content'),
+    titlecontent   : getParam('titlecontent')
   };
 
   $.each(map, function(type, value) {
     if (value !== null) {
-      if( type === 'title' ) {
+      if( type === 'tags' ) {
         $.getJSON('/search.json', function(data) {
-          layoutResultsPage('Search', value, filterContainsValue(data, type, value));
+          layoutResultsPage(type, value, filterPostsByPropertyValue(data, type, value));
+        });
+
+      } else if ( type === 'titlecontent' ) {
+        $.getJSON('/search.json', function(data) {
+          layoutResultsPage(type, value, filterContainsValue(data, ['title', 'content'], value));
         });
 
       } else {
         $.getJSON('/search.json', function(data) {
-          layoutResultsPage(type, value, filterPostsByPropertyValue(data, type, value));
+          layoutResultsPage(type, value, filterContainsValue(data, type, value));
         });
       }
     }
@@ -170,3 +169,18 @@ $(function() {
   // ... and in inline code
   replaceERBTags($('p code'));
 });
+
+function searchRun() {
+  var type = $searchType.val();
+  var input = $searchInput.val();
+  location.href = '/search?' + type + '=' + input;
+}
+
+$('#searchButton').click(searchRun);
+$searchInput.keyup(function(e) {
+  if( 13 == e.keyCode ) {
+    searchRun();
+  }
+});
+
+$searchInput.focus();
