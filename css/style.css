@@ -245,10 +245,7 @@ html {
 .category-list {
   border-bottom: 1px solid #eee;
   padding-bottom: 20px;
-  white-space: nowrap;
-  width: 100%;
-  overflow-y: hidden;
-  overflow-x: auto;
+  line-height: 40px;
 }
 
 .category {
@@ -260,6 +257,7 @@ html {
   margin-right: 5px;
   cursor: pointer;
   border: 1px solid #E4E4E4;
+  line-height: 25px;
 }
 
 .category.current, .category:hover {
