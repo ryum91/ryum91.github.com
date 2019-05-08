@@ -1,0 +1,9 @@
+<div class="category-list">
+  <span class="category" name="daily" onclick="location.href='/daily'">전체</span>
+  <span class="category" name="dailycafe" onclick="location.href='/daily/cafe'">Cafe</span>
+</div>
+
+<script>
+  var path = location.pathname.replace(/\//gi, '');
+  $('.category[name="' + path + '"]').addClass('current');
+</script>
