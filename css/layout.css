@@ -39,3 +39,8 @@ ul, ol {
 .desc {
   color: #555;
 }
+
+.sentence {
+  display: block;
+  text-indent: 6px;
+}
