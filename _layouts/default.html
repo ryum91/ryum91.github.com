@@ -13,6 +13,10 @@
     <meta charset="UTF-8">
     <meta content='{{ page.title }} - {{ site.title }}' name='title' />
     <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
+    {% if is_post %}
+    <meta name="keywords" content='{{ page.tags | join: "," }}' />
+    {% endif %}
+
     {% if page.title %}
       <title>{{ page.title }} - {{ site.title }}</title>
     {% else %}
