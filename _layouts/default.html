@@ -11,8 +11,10 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta content='{{ page.title }} - {{ site.title }}' name='title' />
-    <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
+    <meta name='title' content='{{ page.title }} - {{ site.title }}' />
+    <meta name='og:title' content='{{ page.title }} - {{ site.title }}' />
+    <meta http-equiv="Title" content='{{ page.title }} - {{ site.title }}' />
+    <meta http-equiv="Publisher" content="charyum Park" />
     {% if is_post %}
     <meta name="keywords" content='{{ page.tags | join: "," }}' />
     {% endif %}
