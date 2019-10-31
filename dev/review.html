@@ -1,13 +1,13 @@
 ---
-permalink: /
+layout: default
 ---
-<div class="category-list">
-  <span class="category current" onclick="location.href='/'">All</span>
-  <span class="category" onclick="location.href='/dev'">Dev</span>
-  <span class="category" onclick="location.href='/daily'">Daily</span>
-</div>
+
+{% assign dev_post = site.posts | where:'category', 'dev' | where:'sub', 'review' %}
+
+{% include devSub.html %}
+
 <ul class="list pa0">
-  {% for post in site.posts %}
+  {% for post in dev_post %}
   <li class="mv2 postElement" data-index="{{ forloop.index }}" style="display:none">
     <a href="{{ site.url }}{{ post.url }}" class="db pv1 link blue hover-mid-gray">
       <div class="list-text-wrap">
