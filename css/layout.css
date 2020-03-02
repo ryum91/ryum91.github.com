@@ -38,6 +38,8 @@ ul, ol {
 
 .desc {
   color: #555;
+  line-height: 40px;
+  font-weight: bold;
 }
 
 .sentence {
