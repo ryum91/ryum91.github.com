@@ -270,17 +270,23 @@ html {
   margin-bottom: 10px;
 }
 
+.search-wrap > div {
+  display: flex;
+}
+
 #searchType {
   height: 25px;
   border-radius: 3px;
 }
 
 #searchInput {
-  width: calc(100% - 130px);
+  flex: 1;
   height: 25px;
   border-radius: 3px;
   border: 1px solid #A9A9A9;
   padding-left: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 #searchButton {
