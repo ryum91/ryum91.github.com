@@ -64,10 +64,18 @@
 }
 
 .list-text-wrap {
-  width: calc(100% - 100px);
-  display: inline-block;
+  flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.post-link {
+  display: flex;
+  align-items: center;
+}
+
+.post-link > time {
+  font-size: 0.8rem;
 }
 
 .list-text {
@@ -246,6 +254,8 @@ html {
   border-bottom: 1px solid #eee;
   padding-bottom: 20px;
   line-height: 40px;
+  display: flex;
+  overflow-x: auto;
 }
 
 .category {

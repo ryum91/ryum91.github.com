@@ -9,11 +9,11 @@ layout: default
 <ul class="list pa0">
   {% for post in daily_post %}
   <li class="mv2 postElement" data-index="{{ forloop.index }}" style="display:none">
-    <a href="{{ site.url }}{{ post.url }}" class="db pv1 link blue hover-mid-gray">
+    <a href="{{ site.url }}{{ post.url }}" class="db pv1 link blue hover-mid-gray post-link">
       <div class="list-text-wrap">
         <span class="list-text">{{ post.title }}</span>
       </div>
-      <time class="fr silver ttu">{{ post.date | date: "%Y-%m-%d" }} </time>
+      <time class="fr silver ttu">{{ post.date | date: "%Y%m%d" }} </time>
     </a>
   </li>
   {% endfor %}
