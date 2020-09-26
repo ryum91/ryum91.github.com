@@ -5,25 +5,28 @@ comments: true
 category: dev
 sub: javascript
 tags: []
-image: https://memory.today/dev/60/1.jpg
+image: https://ryum91.github.io/dev/60/1.jpg
 ---
 
 ## Category
-* dev
-  * java
-  * javascript
-  * htmlcss
-  * os
-  * network
-  * algorithm
-  * review
-  * etc
 
-* daily
-  * review
-  * etc
+- dev
+
+  - java
+  - javascript
+  - htmlcss
+  - os
+  - network
+  - algorithm
+  - review
+  - etc
+
+- daily
+  - review
+  - etc
 
 ## Image
+
 <p class="center">
   <img class="center border radius" style="width:50rem;" src="/dev/60/1.jpg"><br>
   <span class="desc">NHN Forward 2019</span>

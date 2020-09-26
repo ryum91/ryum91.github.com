@@ -1,46 +1,45 @@
 # ----------- CONFIGURABLE START -----------
-title:            "오늘의 기억"
-description:      "Charyum. Park"
-url:              https://memory.today # Site url, without a slash at the end.
-signoff:          "Ryum" # Your name
+title: "오늘의 기억"
+description: "Charyum. Park"
+url: https://ryum91.github.io/ # Site url, without a slash at the end.
+signoff: "Ryum" # Your name
 
-share:            true # Turn on twitter and facebook share buttons
-disqus_id:        "ryum91"
-page_per_count:   20
+share: true # Turn on twitter and facebook share buttons
+disqus_id: "ryum91"
+page_per_count: 20
 
-github_url: 'https://github.com/ryum91'
+github_url: "https://github.com/ryum91"
 
-facebook_appid:   544362209237824 # APP ID for like button, remove from /_includes/share.html if unwanted.
+facebook_appid: 544362209237824 # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-106652933-2 # Set tracking, remove from /javascripts/basic.js if unwanted.
 
 links:
-  - name:         Dev
-    url:          /dev
-    external:     false
-    icon:         fa-desktop
-  - name:         Daily
-    url:          /daily
-    external:     false
-    icon:         fa-book-open
-  - name:         Tags
-    url:          /tags
-    external:     false
-    icon:         fa-tags
-  - name:         Search
-    url:          /search
-    external:     false
-    icon:         fa-search
-  - name:         About
-    url:          /about
-    external:     false
-    icon:         fa-user
+  - name: Dev
+    url: /dev
+    external: false
+    icon: fa-desktop
+  - name: Daily
+    url: /daily
+    external: false
+    icon: fa-book-open
+  - name: Tags
+    url: /tags
+    external: false
+    icon: fa-tags
+  - name: Search
+    url: /search
+    external: false
+    icon: fa-search
+  - name: About
+    url: /about
+    external: false
+    icon: fa-user
 
 # ------------ CONFIGURABLE END ------------
 
-permalink:        /:categories/:title
+permalink: /:categories/:title
 defaults:
   - values:
       layout: "default"
-
 # bundle install
 # bundle exec jekyll serve --watch
